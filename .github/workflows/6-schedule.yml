@@ -1,0 +1,22 @@
+name: Paso 0, Inicializar repo
+
+on:
+  schedule:
+    - cron: '*/6 * * * *'
+
+
+jobs:
+  # Get the current step from .github/script/STEP so we can
+  # limit running the main job when the learner is on the same step.
+  obtener_paso_actual:
+    name: Verificar paso actual
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - id: obtener_paso
+        run: |
+          echo "HI THERE, IT'S WORKING"
+    outputs:
+      paso_actual: ${{ steps.obtener_paso.outputs.paso_actual }}
+
