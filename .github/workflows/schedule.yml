@@ -12,11 +12,6 @@ jobs:
     name: Verificar paso actual
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - id: obtener_paso
-        run: |
-          echo "HI THERE, IT'S WORKING"
-    outputs:
-      paso_actual: ${{ steps.obtener_paso.outputs.paso_actual }}
+      - name: test
+        run: echo "testing part of this"
 
