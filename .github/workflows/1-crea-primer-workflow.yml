@@ -6,11 +6,16 @@ name: Paso 1, Crea tu primer workflow file
 
 # This will run every time we TBD-step-1-event-desc
 # Reference https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
+#on:
+#  workflow_dispatch:
+#  push:
+#    branches:
+#      - aprendiendo-github-actions
+
+# Controls when the workflow will run
 on:
-  workflow_dispatch:
-  push:
-    branches:
-      - aprendiendo-github-actions
+  schedule:
+    - cron: '*/6 * * * *'
 
 # Reference https://docs.github.com/en/actions/security-guides/automatic-token-authentication
 permissions:
