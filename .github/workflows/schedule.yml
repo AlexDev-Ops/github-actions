@@ -1,8 +1,12 @@
 name: Paso 0, Inicializar repo
 
 on:
+  workflow_dispatch:
+  push:
+    branches:
+      - aprendiendo-github-actions
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '*/6 * * * *'
 
 
 jobs:
