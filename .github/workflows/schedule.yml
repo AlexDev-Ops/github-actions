@@ -6,7 +6,7 @@ on:
     branches:
       - aprendiendo-github-actions
   schedule:
-    - cron: '*/6 * * * *'
+    - cron: '* * * * 1'
 
 
 jobs:
