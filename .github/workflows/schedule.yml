@@ -21,7 +21,7 @@ jobs:
       - name: Trigger second workflow in another repo
         run: |
           curl -X POST \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Authorization: token ${{ secrets.MY_TOKEN }}" \
             -d '{"ref":"main"}' \
             https://api.github.com/repos/AlexDev-Ops/content-github-actions-deep-dive-lesson/actions/workflows/init.yaml/dispatches
 
