@@ -1,4 +1,4 @@
-name: Paso 0, Inicializar repo
+name: Inicializar_repo
 
 on:
   workflow_dispatch:
